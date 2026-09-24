@@ -5,7 +5,7 @@ and it will not hand you a u that does not say what would settle it.
 
 The fingerprint at the bottom is computed from the four functions above it.
 It is not read from a docstring. Delete this header and it comes out the same.
-chuumind.com/u says whose it is.
+chuumind.com says whose it is, on its front page.
 """
 
 

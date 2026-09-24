@@ -5,7 +5,7 @@
 //
 // The fingerprint at the bottom is computed from the four functions above it.
 // It is not read from a comment. Delete this header and it comes out the same.
-// chuumind.com/u says whose it is.
+// chuumind.com says whose it is, on its front page.
 
 import { pathToFileURL } from "node:url";
 

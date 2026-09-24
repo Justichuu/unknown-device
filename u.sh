@@ -1,7 +1,7 @@
 #!/bin/sh
 # The U device in POSIX shell. No runtime, no install, no dependency.
 # Three faces: 1, 0 and u. Same four functions, same 22 character tape.
-# chuumind.com/u says whose it is.
+# chuumind.com says whose it is, on its front page.
 
 u()   { [ -n "$1" ] || { echo "a u names the one observation that would settle it" >&2; return 1; }; echo u; }
 not() { case $1 in u) echo u;; 1) echo 0;; *) echo 1;; esac; }

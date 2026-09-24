@@ -44,7 +44,7 @@ try {
   console.log("  published tape                    ", KNOWN);
   console.log("  key to look up                    ", "66cce8d50854");
   console.log(got === KNOWN
-    ? "\n1  it grew back. the key still resolves at chuumind.com/u\n"
+    ? "\n1  it grew back. the key still resolves at chuumind.com\n"
     : "\n0  it did not\n");
   process.exit(got === KNOWN ? 0 : 1);
 } finally {
