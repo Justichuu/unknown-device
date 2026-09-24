@@ -1,0 +1,58 @@
+MIT License
+
+Copyright (c) 2026 Justichuu
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+THE FINGERPRINT
+
+What follows adds no condition to the MIT grant above. It takes nothing away
+from it either. It describes how this code is identified, so that nobody has to
+be told twice.
+
+Run every function in this device over every face and write the answers down in
+order. You get twenty two characters:
+
+    01u10u000u0u11110u1uu1
+
+That is the fingerprint. It is not stored in a comment, a header, a string, or
+a file. It is what the code does, read back out, so it survives deleting the
+comments, renaming everything, reformatting, minifying, and porting to another
+language. `node burn.mjs` in this repository does all of that and prints it.
+
+Hash it and you get the key:
+
+    sha256("01u10u000u0u11110u1uu1") = 66cce8d50854...
+
+The key resolves to the list of everyone who worked on this, which is published
+in README.md and at https://chuumind.com. Those records are not inside your
+copy, so removing the notice from your copy does not remove them.
+
+You may burn it off. The MIT grant does ask you to keep the notice, and if you
+drop it that is between you and the licence, but nothing technical stops you and
+nothing here pretends otherwise. What it buys you is the time between your
+deletion and somebody running the device and hashing the answer. Spend it well.
+
+Change the tables and the key changes with them. At that point it is a different
+device and it is yours. That was never restricted.
+
+The method is published on purpose. Nothing here depends on anybody not knowing
+how it works.

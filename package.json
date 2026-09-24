@@ -1,0 +1,14 @@
+{
+  "name": "u-device",
+  "version": "1.0.0",
+  "description": "Three faces: 1, 0 and u. Four functions. A fingerprint computed from what the code does, so it grows back after you delete it.",
+  "license": "MIT",
+  "type": "module",
+  "main": "u.js",
+  "files": ["u.js", "u.py", "u.sh", "verify.mjs", "burn.mjs", "assets"],
+  "scripts": {
+    "test": "node verify.mjs",
+    "burn": "node burn.mjs"
+  },
+  "keywords": ["three-valued-logic", "kleene", "unknown", "provenance", "fingerprint"]
+}
