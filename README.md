@@ -36,11 +36,11 @@ and it throws. A shrug that survives review is how a wrong thing gets built on.
 Try the case the whole design turns on:
 
 ```js
-or(u("try it"), not("u"))    // "u", not 1
-and(u("try it"), not("u"))   // "u", not 0
+const x = u("whether anybody actually measured it");  // "u"
+or(x, not(x))    // "u". Not 1. A thing and its opposite do not cover everything.
+and(x, not(x))   // "u". Not 0. They do not cancel out either.
 ```
 
-A thing and its opposite do not cover everything, and they do not cancel out.
 All is and isn't all.
 
 ## The fingerprint
@@ -61,8 +61,12 @@ out, because they are the answers and not the source.
 Hash it and you get the key that looks the rest up:
 
 ```
-sha256("01u10u000u0u11110u1uu1") = 66cce8d50854...
+sha256("01u10u000u0u11110u1uu1")
+  = 66cce8d50854ee21b9964b5bdcb3aa80054f6da5e24de6258c268ea6e3942a35
 ```
+
+The first twelve characters, `66cce8d50854`, are the key. Check it yourself:
+`printf %s 01u10u000u0u11110u1uu1 | sha256sum`.
 
 ## Burning it off
 
@@ -92,28 +96,31 @@ notice. This just means the notice can be recomputed after you delete it.
 
 ## Who is in it
 
-The key `66cce8d50854` resolves to this list. Everything that worked on this,
-human and not. Observed 23 September 2026.
+The key `66cce8d50854` resolves to this list. Everyone and everything that
+worked on this. A face on every line, because a credit with no evidence behind
+it is worth less than an honest blank.
 
-| | |
-|---|---|
-| **Justichuu** | the person. Wrote the rules it implements, decided it goes out. |
-| Claude Opus 5 | Anthropic. Wrote this pass. |
-| Codex | OpenAI. Works this repository. |
-| ChatGPT | OpenAI. |
-| Cursor | |
-| Grok | xAI. |
-| deepseek&#8209;r1:14b | local, Ollama. Reasoning. |
-| qwen2.5&#8209;coder:14b | local, Ollama. Code. |
-| qwen2.5&#8209;coder:1.5b&#8209;base | local, Ollama. |
-| moondream | local, Ollama. Images. |
-| llama3.1:8b | local, Ollama. |
-| hermes3:8b&#8209;llama3.1&#8209;q8_0 | local, Ollama. |
-| huihui_ai/qwen3.5&#8209;abliterated:35b | local, Ollama. |
+| | face | what it did, and how that is known |
+|---|---|---|
+| **Justichuu** | 1 | The person. Wrote the rules this implements, asked for it, decided it goes out. His instruction, 23 September 2026. |
+| Claude Opus 5 | 1 | Anthropic. Wrote every file in this repository. Observed in the session that produced them, 23 September 2026. |
+| OpenAI Codex | 1 | Built a second, different U device in a neighbouring folder the same hour, and its records named the rest of this list. Observed in `local/working/u-device`, 23 September 2026. |
+| GitHub Copilot | u | Named in Codex's provenance record as part of the surrounding work. No contribution to these files was observed. Settled by him saying so. |
+| ChatGPT | u | Named in the workspace guide as a tool he uses. Same. |
+| Cursor | u | Same. |
+| Grok | u | Same. |
+| deepseek&#8209;r1:14b | u | Local, Ollama. Present on the machine, `ollama list`, 23 September 2026. Not run for these files. |
+| qwen2.5&#8209;coder:14b | u | Local, Ollama. Same. |
+| qwen2.5&#8209;coder:1.5b&#8209;base | u | Local, Ollama. Same. |
+| moondream | u | Local, Ollama. Same. |
+| llama3.1:8b | u | Local, Ollama. Same. |
+| hermes3:8b&#8209;llama3.1&#8209;q8_0 | u | Local, Ollama. Same. |
+| huihui_ai/qwen3.5&#8209;abliterated:35b | u | Local, Ollama. Same. |
+| anyone not named here | u | Add a name and what settles it. |
 
-The local list is what `ollama list` reported on this machine that day. The
-hosted ones are from the workspace guide. Neither is a claim that every model
-listed touched this particular file.
+Three of those are `1` and the rest are `u`. A `u` here is not a demotion. It
+means present in the work and not measured on these particular files, which is
+the true thing, and the roster would be worth nothing if it rounded that up.
 
 ## Run it
 
