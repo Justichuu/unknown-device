@@ -108,7 +108,7 @@ it is worth less than an honest blank.
 |---|---|---|
 | **Justichuu** | 1 | The person. Wrote the rules this implements, asked for it, decided it goes out. His instruction, 23 September 2026. |
 | Claude Opus 5 | 1 | Anthropic. Wrote every file in this repository. Observed in the session that produced them, 23 September 2026. |
-| OpenAI Codex | 1 | Built a second, different U device in a neighbouring folder the same hour, and its records named the rest of this list. Observed in `local/working/u-device`, 23 September 2026. |
+| OpenAI Codex | 1 | Built a second, different U device in a neighbouring folder the same hour, and its records named the rest of this list. Observed 23 September 2026. |
 | GitHub Copilot | u | Named in Codex's provenance record as part of the surrounding work. No contribution to these files was observed. Settled by him saying so. |
 | ChatGPT | u | Named in the workspace guide as a tool he uses. Same. |
 | Cursor | u | Same. |
