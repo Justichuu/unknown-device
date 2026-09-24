@@ -15,9 +15,10 @@ const ports = [
   ["u.sh  sh", ["sh", ["u.sh"]]],
 ];
 
-let bad = 0;
+let bad = 0, grey = 0;
 const say = (face, name, detail) => {
-  if (face !== "1") bad++;
+  if (face === "0") bad++;
+  if (face === "u") grey++;
   console.log(`  ${face}  ${name}${detail ? "  " + detail : ""}`);
 };
 
@@ -28,8 +29,10 @@ for (const [name, [cmd, args]] of ports) {
     const out = execFileSync(cmd, args, { encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] });
     got = (out.match(/tape\s+(\S+)/) || [])[1];
   } catch (err) {
-    // A runtime that is not installed is u, not 0. It was not measured here.
-    console.log(`  u  ${name}  not on this machine: ${cmd} did not run`);
+    // A runtime that is not installed is u, not 0. It was not measured here,
+    // and it is counted as not measured rather than quietly skipped. A grey
+    // that does not reach the last line is the same lie as a false green.
+    say("u", name, `not on this machine: ${cmd} did not run`);
     continue;
   }
   say(got === KNOWN ? "1" : "0", name, got);
@@ -46,5 +49,12 @@ say(refused ? "1" : "0", "a bare u is refused", "stone 4");
 say(or("u", not("u")) === "u" && and("u", not("u")) === "u" ? "1" : "0",
     "all is and isn't all", "or(u, not u) and and(u, not u) are both u");
 
-console.log(bad === 0 ? "\n1  the device is itself\n" : `\n0  ${bad} failed\n`);
+// The last line never rounds a grey up. "Nothing failed" and "everything was
+// looked at" are different results, and a reader who only reads this line is
+// entitled to both.
+const runtimes = ports.length, measured = runtimes - grey;
+const coverage = `${measured} of ${runtimes} runtimes measured` + (grey ? `, ${grey} u` : "");
+if (bad) console.log(`\n0  ${bad} failed. ${coverage}\n`);
+else if (grey) console.log(`\nu  nothing failed, and not everything was looked at. ${coverage}\n`);
+else console.log(`\n1  the device is itself. ${coverage}\n`);
 process.exit(bad === 0 ? 0 : 1);

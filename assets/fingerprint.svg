@@ -60,7 +60,7 @@
     <line x1="34" y1="278" x2="866" y2="278" stroke="#ded7e0" stroke-width="2"/>
     <text x="34" y="306" font-size="13" letter-spacing="2.4" fill="#6b5f6e">BURN THE HEADER OFF</text>
     <rect x="34" y="320" width="330" height="54" rx="8" fill="#fff" stroke="#ded7e0" stroke-width="2.4"/>
-    <text x="48" y="342" font-size="13" fill="#b0a7b3">// chuumind.com says whose it is</text>
+    <text x="48" y="342" font-size="13" fill="#b0a7b3">// chuumind.com/u says whose it is</text>
     <line x1="44" y1="337" x2="330" y2="337" stroke="#ff4d2e" stroke-width="2.4"/>
     <text x="48" y="363" font-size="13">const q0 = ... const q1 = ...</text>
     <line x1="376" y1="347" x2="436" y2="347" stroke="#120c14" stroke-width="2.4" marker-end="url(#a)"/>

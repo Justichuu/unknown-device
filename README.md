@@ -54,9 +54,13 @@ still refused. Twenty two characters:
 ```
 
 That is the fingerprint. It is not a string stored anywhere. It is what the
-code does, read back out. Rename every function, delete every comment, port it
-to a language nobody here has heard of, and the same twenty two characters come
-out, because they are the answers and not the source.
+code does, read back out, so it is the answers and not the source.
+
+Witnessed here: deleting every comment and renaming every function leaves it
+unchanged, and three ports in three unrelated languages write it identically.
+Reasoned from that, not witnessed: a fourth language would do the same. The
+device is comparison and string building, and nothing else, so there is not
+much left for a language to disagree about. Go and be the fourth.
 
 Hash it and you get the key that looks the rest up:
 
